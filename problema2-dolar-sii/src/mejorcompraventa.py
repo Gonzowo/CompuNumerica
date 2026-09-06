@@ -1,4 +1,4 @@
-from errores import valor_cifras_significativas
+from errores import valor_n_cifras_significativas
 from carga_datos import crear_diccionario_dolar, datos
 diccionario_dolar = crear_diccionario_dolar(datos)
 
@@ -24,8 +24,8 @@ def main():
     
     # Aproximaciones a 3 cifras significativas
     cifras = 3
-    precio_compra = valor_cifras_significativas(min_info['valor_real'], cifras)
-    precio_venta = valor_cifras_significativas(max_info['valor_real'], cifras)
+    precio_compra = valor_n_cifras_significativas(min_info['valor_real'], cifras)
+    precio_venta = valor_n_cifras_significativas(max_info['valor_real'], cifras)
     
     # Errores absolutos base
     ea_compra = abs(min_info['valor_real'] - precio_compra)
